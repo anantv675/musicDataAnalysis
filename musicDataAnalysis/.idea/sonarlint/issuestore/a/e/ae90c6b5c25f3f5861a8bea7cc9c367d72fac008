@@ -1,0 +1,5 @@
+
+t	java:S116"SRename this field "main_cat" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(³¾ñ”ùÿÿÿÿ8°Ð¤´É/
+j	java:S116"NRename this field "_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(úéÑÚ8°Ð¤´É/
+o	java:S116!"SRename this field "also_buy" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÞÇ„»8°Ð¤´É/
+n	java:S116"RRename this field "Reviews" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êê¡”8°Ð¤´É/

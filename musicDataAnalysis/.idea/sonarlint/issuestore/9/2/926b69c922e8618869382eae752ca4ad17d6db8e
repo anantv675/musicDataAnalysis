@@ -1,0 +1,52 @@
+
+V	java:S106£"9Replace this use of System.out or System.err by a logger.(‘±…8×é´É/
+V	java:S106¹"9Replace this use of System.out or System.err by a logger.(”óŠÄ8×é´É/
+|
+java:S1192("ZDefine a constant instead of duplicating this literal "mongodb://localhost:27017" 3 times.(’Íï¥úÿÿÿÿ8×é´É/
+f
+java:S1192E"IDefine a constant instead of duplicating this literal "Inserted" 3 times.(”óŠÄ8×é´É/
+Z	java:S106I"9Replace this use of System.out or System.err by a logger.(êÓæøùÿÿÿÿ8×é´É/
+Z	java:S106O"9Replace this use of System.out or System.err by a logger.(ìòÜ§üÿÿÿÿ8×é´É/
+k
+java:S2095("IUse try-with-resources or close this "MongoClient" in a "finally" clause.(’Íï¥úÿÿÿÿ8×é´É/
+V	java:S106©"9Replace this use of System.out or System.err by a logger.(šÈŞ§8×é´É/
+[	java:S106°"9Replace this use of System.out or System.err by a logger.(ÏğÙïúÿÿÿÿ8×é´É/
+M
+java:S3740™"/Provide the parametrized type for this generic.(„¿ÕÔ8×é´É/
+Z	java:S106u"9Replace this use of System.out or System.err by a logger.(¼„“˜ùÿÿÿÿ8×é´É/
+[	java:S106¬"9Replace this use of System.out or System.err by a logger.(¼„“˜ùÿÿÿÿ8×é´É/
+h
+java:S1128"LRemove this unused import 'com.fasterxml.jackson.databind.util.JSONPObject'.(æïœ8×é´É/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(”óŠÄ8×é´É/
+e
+java:S1128"CRemove this unused import 'org.apache.tomcat.util.json.JSONParser'.(ö½¥¨ùÿÿÿÿ8×é´É/
+r	java:S117V"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ÿ›„úşÿÿÿÿ8×é´É/
+l	java:S117_"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥ú–8×é´É/
+p
+java:S1192)"NDefine a constant instead of duplicating this literal "musicAnalysis" 3 times.(óî×Òÿÿÿÿÿ8×é´É/
+m	java:S117U"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Û¨½‘8×é´É/
+X
+java:S1128"6Remove this unused import 'org.bson.conversions.Bson'.(ŠŸ‰…úÿÿÿÿ8×é´É/
+Q
+java:S1172&"/Remove this unused method parameter "fileName".(¤ÚÑßúÿÿÿÿ8×é´É/
+Z	java:S106o"9Replace this use of System.out or System.err by a logger.(©¬èùÿÿÿÿ8×é´É/
+s
+java:S1128"QRemove this unused import 'org.springframework.context.annotation.ComponentScan'.(æëòÒûÿÿÿÿ8×é´É/
+U	java:S106s"9Replace this use of System.out or System.err by a logger.(šÈŞ§8×é´É/
+U	java:S106}"9Replace this use of System.out or System.err by a logger.(øÏÊÄ8×é´É/
+n	java:S117˜"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ì±ü8×é´É/
+e
+java:S1128"HRemove this unused import 'org.springframework.context.annotation.Bean'.(‚î‰Ş8×é´É/
+Y	java:S125Â"<This block of commented-out lines of code should be removed.(ƒìı¹8×é´É/
+U	java:S106E"9Replace this use of System.out or System.err by a logger.(”óŠÄ8×é´É/
+[	java:S106¡"9Replace this use of System.out or System.err by a logger.(à×à¾øÿÿÿÿ8×é´É/
+V	java:S106·"9Replace this use of System.out or System.err by a logger.(øÏÊÄ8×é´É/
+L
+java:S3740`"/Provide the parametrized type for this generic.(Ó”èÁ8×é´É/
+U	java:S106«"9Replace this use of System.out or System.err by a logger.(ÊÂÚa8×é´É/
+j
+java:S1192n"HDefine a constant instead of duplicating this literal "Reviews" 4 times.(Ì×ÿüÿÿÿÿ8×é´É/
+Z
+java:S1128"=Remove this unused import 'org.bson.json.JsonWriterSettings'.(¹ÃáÖ8×é´É/
+[	java:S106‚"9Replace this use of System.out or System.err by a logger.(«ÁèÃùÿÿÿÿ8×é´É/
+V	java:S106´"9Replace this use of System.out or System.err by a logger.(™¼õñ8×é´É/

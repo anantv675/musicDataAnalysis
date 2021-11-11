@@ -1,0 +1,45 @@
+import { useRef, useState,useEffect } from "react";
+import React from "react";
+import ReactDOM from 'react-dom';
+import ItemService from '../services/ItemService'
+import ItemTable from "./PopulateTable";
+
+    function FetchData(){
+
+        // Render the UI for your table
+
+        const [brand, setBrand] = useState('');
+
+
+        const inputRef = useRef();
+        let apiData;
+
+        const submitHandler = (e) => {
+            e.preventDefault();
+            setBrand(inputRef.current.value);
+            apiData = ItemService.getAllItemsByBrand(inputRef.current.value);
+            const p = Promise.resolve(apiData);
+            p.then(function(v) {
+                console.log(v["Items"])
+                const element = <ItemTable brandData={v["Items"]}/>;
+                ReactDOM.render(element, document.getElementById('list'))
+            });
+
+        };
+
+        return (
+            <div className="App">
+                <form onSubmit={submitHandler}>
+                    <input ref={inputRef} />
+                    <button type="submit">Submit</button>
+                        <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '70vh'}} id="list"/>
+                </form>
+
+
+
+            </div>
+        );
+    };
+
+
+    export default FetchData

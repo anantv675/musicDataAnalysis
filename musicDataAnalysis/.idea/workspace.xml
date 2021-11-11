@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ce47b524-e86c-48be-a819-efc625068771" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/music-app-front-end" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="17606254-3f51-4c16-9af4-bafe46afcbec" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1zhtep8ifEwM16z499ZHweH71mx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DataanalysisApplication">
+    <configuration name="DataanalysisApplicationTests.getData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicDataAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.musicdataanalysis.dataanalysis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.musicdataanalysis.dataanalysis" />
+      <option name="MAIN_CLASS_NAME" value="com.musicdataanalysis.dataanalysis.DataanalysisApplicationTests" />
+      <option name="METHOD_NAME" value="getData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataanalysisApplicationTests.getItemData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicDataAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.musicdataanalysis.dataanalysis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.musicdataanalysis.dataanalysis" />
+      <option name="MAIN_CLASS_NAME" value="com.musicdataanalysis.dataanalysis.DataanalysisApplicationTests" />
+      <option name="METHOD_NAME" value="getItemData" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataanalysisApplicationTests.getItemThroughController" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="musicDataAnalysis" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.musicdataanalysis.dataanalysis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.musicdataanalysis.dataanalysis" />
+      <option name="MAIN_CLASS_NAME" value="com.musicdataanalysis.dataanalysis.DataanalysisApplicationTests" />
+      <option name="METHOD_NAME" value="getItemThroughController" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataanalysisApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="musicDataAnalysis" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.musicdataanalysis.dataanalysis.DataanalysisApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DataanalysisApplicationTests.getItemThroughController" />
+        <item itemvalue="JUnit.DataanalysisApplicationTests.getItemData" />
+        <item itemvalue="JUnit.DataanalysisApplicationTests.getData" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ce47b524-e86c-48be-a819-efc625068771" name="Default Changelist" comment="" />
+      <created>1634612245289</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1634612245289</updated>
+      <workItem from="1634612258534" duration="164000" />
+      <workItem from="1634612446320" duration="5818000" />
+      <workItem from="1634700495854" duration="4194000" />
+      <workItem from="1635240269120" duration="3327000" />
+      <workItem from="1635311017583" duration="2285000" />
+      <workItem from="1635401119875" duration="13594000" />
+      <workItem from="1635513351131" duration="87000" />
+      <workItem from="1635736169034" duration="2084000" />
+      <workItem from="1635739947164" duration="3553000" />
+      <workItem from="1635941883453" duration="49740000" />
+      <workItem from="1636542333222" duration="1109000" />
+    </task>
+    <task id="LOCAL-00001" summary="Added front end and configured CORS">
+      <created>1635511524160</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1635511524160</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added front end and configured CORS">
+      <created>1635740045150</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1635740045150</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added front end and configured CORS" />
+    <MESSAGE value="Added table with search functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added table with search functionality" />
+  </component>
+</project>
