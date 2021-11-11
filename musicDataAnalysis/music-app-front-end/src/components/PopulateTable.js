@@ -196,6 +196,7 @@ function Table({ columns, data }) {
                             textAlign: 'left',
                         }}
                     >
+                        {/*if you want to disable global filtering, comment out <GlobalFilter> tag*/}
                         <GlobalFilter
                             preGlobalFilteredRows={preGlobalFilteredRows}
                             globalFilter={state.globalFilter}
@@ -218,12 +219,12 @@ function Table({ columns, data }) {
                 </tbody>
             </table>
             <br />
-            <div>Showing the first 20 results of {rows.length} rows</div>
-            <div>
-        <pre>
-          <code>{JSON.stringify(state.filters, null, 2)}</code>
-        </pre>
-            </div>
+            {/*<div>Showing the first 20 results of {rows.length} rows</div>*/}
+        {/*    <div>*/}
+        {/*<pre>*/}
+        {/*  <code>{JSON.stringify(state.filters, null, 2)}</code>*/}
+        {/*</pre>*/}
+        {/*    </div>*/}
         </>
     )
 }
@@ -237,26 +238,31 @@ function ItemTable(props) {
                     {
                         Header: 'Date',
                         accessor: 'date',
+                        disableFilters: true
                     },
                     {
                         Header: 'Title',
                         accessor: 'title',
-                        filter: 'fuzzyText',
+                        disableFilters: false,
+                        // filter: 'fuzzyText',
                     },
                     {
                         Header: 'Main category',
                         accessor: 'main_cat',
+                        disableFilters: false,
                         Filter: SelectColumnFilter,
-                        filter: 'includes',
+                        // filter: 'includes',
                     },
                     {
                         Header: 'Brand',
                         accessor: 'brand',
+                        disableFilters: true
                     },
                     {
                         Header: 'Item ID',
                         accessor: 'asin',
-                        filter: 'fuzzyText',
+                        disableFilters: false
+                        // filter: 'fuzzyText',
                     }
                 ],
             },
