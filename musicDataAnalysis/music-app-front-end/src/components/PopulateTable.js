@@ -115,7 +115,6 @@ function SelectColumnFilter({
 }
 
 function fuzzyTextFilterFn(rows, id, filterValue) {
-    console.log(" inside fuzzyTextFilterFn ")
     return matchSorter(rows, filterValue, { keys: [row => row.values[id]] })
 }
 fuzzyTextFilterFn.autoRemove = val => !val
