@@ -2,6 +2,7 @@ import React, {useState,useRef} from 'react'
 import styled from 'styled-components'
 import { useTable, useFilters, useGlobalFilter, useAsyncDebounce,usePagination } from 'react-table'
 import {matchSorter} from 'match-sorter'
+import makeData from '../services/makeData'
 
 let serverData = []
 
@@ -188,6 +189,7 @@ const Styles = styled.div`
                 defaultColumn, // Be sure to pass the defaultColumn option
                 filterTypes,
                 initialState: {pageIndex: 0}, // Pass our hoisted table state
+                autoResetPage: false,
                 manualPagination: true, // Tell the usePagination
                 // hook that we'll handle our own data fetching
                 // This means we'll also have to provide our own
@@ -200,10 +202,8 @@ const Styles = styled.div`
         )
 
         // Listen for changes in pagination and use the state to fetch our new data
-        React.useEffect(() => {
-            fetchData({pageIndex, pageSize})
-        }, [fetchData, pageIndex, pageSize])
-
+        React.useEffect(() => {fetchData({pageIndex, pageSize})}, [fetchData, pageIndex, pageSize])
+        // serverData = React.useMemo(() => props.brandData, [props.brandData]);
         // Render the UI for your table
         return (
             <>
@@ -379,28 +379,31 @@ const Styles = styled.div`
             []
         );
 
-        serverData = React.useMemo(() => props.brandData, [props.brandData]);
-        console.log(serverData)
+        // serverData = React.useMemo(() => props.brandData, [props.brandData]);
+        // console.log(serverData)
         const [data, setData] = React.useState([])
         const [loading, setLoading] = React.useState(false)
         const [pageCount, setPageCount] = React.useState(0)
         const fetchIdRef = React.useRef(0)
-
+        serverData = React.useMemo(() => props.brandData, [props.brandData]);
         const fetchData = React.useCallback(({ pageSize, pageIndex }) => {
+            // console.log("calling fetchData");
             // This will get called when the table needs new data
             // You could fetch your data from literally anywhere,
             // even a server. But for this example, we'll just fake it.
 
             // Give this fetch an ID
-            const fetchId = ++fetchIdRef.current
+            const fetchId = ++fetchIdRef.current;
 
             // Set the loading state
-            setLoading(true)
-
+            setLoading(true);
+            console.log("fetchId: "+fetchId , "fetchIdRef: "+fetchIdRef.current)
             // We'll even set a delay to simulate a server here
             setTimeout(() => {
                 // Only update the data if this is the latest fetch
                 if (fetchId === fetchIdRef.current) {
+                    console.log("Inside setTimeout")
+                    console.log("fetchId: "+fetchId , "fetchIdRef: "+fetchIdRef.current)
                     const startRow = pageSize * pageIndex
                     const endRow = startRow + pageSize
                     setData(serverData.slice(startRow, endRow))
