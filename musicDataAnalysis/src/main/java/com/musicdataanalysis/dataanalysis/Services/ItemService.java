@@ -14,6 +14,7 @@ public interface ItemService {
     Item findItemByAsin(String asin);
     void deleteItemByAsin(String asin);
     Item findReviewsByBrandAndAsin(String brand,String asin);
-    Page<Item> findByBrand(String brand, Pageable pageable);
+//    List<Item> findByBrand(String brand, Pageable pageable);
+    List<Item> findByBrand(String brand);
 
 }

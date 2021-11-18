@@ -20,8 +20,7 @@ import ItemTable from "./PopulateTable";
             apiData = ItemService.getAllItemsByBrand(inputRef.current.value);
             const p = Promise.resolve(apiData);
             p.then(function(v) {
-                console.log(v["Items"])
-                const element = <ItemTable brandData={v["Items"]}/>;
+                const element = <ItemTable brandData={v}/>;
                 ReactDOM.render(element, document.getElementById('list'))
             });
 
@@ -34,9 +33,6 @@ import ItemTable from "./PopulateTable";
                     <button type="submit">Submit</button>
                         <div style={{display: 'flex',  justifyContent:'center', alignItems:'center', height: '70vh'}} id="list"/>
                 </form>
-
-
-
             </div>
         );
     };

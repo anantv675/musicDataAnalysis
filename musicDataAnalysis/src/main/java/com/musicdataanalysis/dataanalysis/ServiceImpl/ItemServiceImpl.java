@@ -10,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -35,7 +36,14 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    public Page<Item> findByBrand(String brand, Pageable pageable) {
-        return itemRepository.findByBrand(brand,pageable);
+    public List<Item> findByBrand(String brand) {
+        Optional<List<Item>> byBrand = itemRepository.findByBrand(brand);
+        return byBrand.get();
     }
+//    @Override
+//    public Page<Item> findByBrand(String brand, Pageable pageable) {
+//        return itemRepository.findByBrand(brand,pageable);
+//    }
+
+
 }

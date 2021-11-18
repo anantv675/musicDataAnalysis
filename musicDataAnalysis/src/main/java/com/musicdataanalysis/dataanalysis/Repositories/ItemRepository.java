@@ -27,7 +27,8 @@ public interface ItemRepository extends MongoRepository<Item,String> {
     @Query(fields = "{'brand':1,'Reviews.reviewerName':1,'asin':1,'Reviews.summary':1}")
     Item findByBrandAndAsin(String brand,String asin);
 
-    Page<Item> findByBrand(String brand, Pageable pageable);
+//    Page<Item> findByBrand(String brand, Pageable pageable);
+    Optional<List<Item>> findByBrand(String brand);
 
     public long count();
 

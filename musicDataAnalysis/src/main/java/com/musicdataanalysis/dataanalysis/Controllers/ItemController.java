@@ -32,30 +32,42 @@ public class ItemController {
         return new ResponseEntity<>(itemByAsin, HttpStatus.OK);
     }
 
+//    @GetMapping("getAllItemsByBrand/{brand}")
+//    public ResponseEntity<Map<String, Object>> getAllItemsByBrand(@PathVariable String brand,
+//                                                                  @RequestParam(defaultValue = "0") int page,
+//                                                                  @RequestParam(defaultValue = "5") int size){
+//
+//        Map<String, Object> response = new HashMap<>();
+//        try{
+//            List<Item> itemsByBrand;
+//            Pageable paging = PageRequest.of(page, size);
+//            Page<Item> pageItems;
+//            pageItems = itemService.findByBrand(brand,paging);
+//
+//            itemsByBrand = pageItems.getContent();
+//
+//            response.put("Items", itemsByBrand);
+//            response.put("pageIndex", pageItems.getNumber());
+//            response.put("pageSize", pageItems.getTotalElements());
+//            response.put("pageCount", pageItems.getTotalPages());
+//
+//        }catch (Exception e){
+//            throw new ResourceNotFoundException("Could not find any item of brand = " + brand);
+//        }
+//
+//        return new ResponseEntity<>(response, HttpStatus.OK);
+//    }
+
     @GetMapping("getAllItemsByBrand/{brand}")
-    public ResponseEntity<Map<String, Object>> getAllItemsByBrand(@PathVariable String brand,
-                                                                  @RequestParam(defaultValue = "0") int page,
-                                                                  @RequestParam(defaultValue = "5") int size){
-
-        Map<String, Object> response = new HashMap<>();
+    public ResponseEntity<List<Item>> getAllItemsByBrand(@PathVariable String brand){
+        List<Item> byBrand = null;
         try{
-            List<Item> itemsByBrand;
-            Pageable paging = PageRequest.of(page, size);
-            Page<Item> pageItems;
-            pageItems = itemService.findByBrand(brand,paging);
-
-            itemsByBrand = pageItems.getContent();
-
-            response.put("Items", itemsByBrand);
-            response.put("currentPage", pageItems.getNumber());
-            response.put("totalItems", pageItems.getTotalElements());
-            response.put("totalPages", pageItems.getTotalPages());
-
+            byBrand = itemService.findByBrand(brand);
         }catch (Exception e){
             throw new ResourceNotFoundException("Could not find any item of brand = " + brand);
         }
 
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        return new ResponseEntity<>(byBrand, HttpStatus.OK);
     }
 
 //    public Reviews getItemReviews(){

@@ -1,19 +1,21 @@
 import axios from 'axios';
+import React from 'react'
 
-const MUSIC_ITEM_API_BASE_URL = "http://localhost:8081/";
+const MUSIC_ITEM_API_BASE_URL = "http://localhost:8083/";
 
 
-    function getAllItemsByBrand(brand){
+function getAllItemsByBrand(brand){
 
-        var params = new URLSearchParams();
-        params.append("page", 0);
-        params.append("size", 5);
 
-        var request = {
-            params: params
-        };
+        // var params = new URLSearchParams();
+        // params.append("pageIndex", 0);
+        // params.append("pageSize", 5);
+        //
+        // var request = {
+        //     params: params
+        // };
 
-        const promise = axios.get(`http://localhost:8082/getAllItemsByBrand/${brand}`,request)
+        const promise = axios.get(`http://localhost:8083/getAllItemsByBrand/${brand}`)
             .then(function (response) {
                 return response.data;
         }).catch(
@@ -27,7 +29,7 @@ const MUSIC_ITEM_API_BASE_URL = "http://localhost:8081/";
 
     const getItemByAsin= (asin) => {
         return axios.get(MUSIC_ITEM_API_BASE_URL + '/getItemByAsin/' + asin);
-    }
+    };
 
 
 
