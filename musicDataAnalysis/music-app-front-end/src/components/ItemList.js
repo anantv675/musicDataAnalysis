@@ -3,6 +3,7 @@ import React from "react";
 import ReactDOM from 'react-dom';
 import ItemService from '../services/ItemService'
 import ItemTable from "./PopulateTable";
+import "../styleSheets/tablePage.css";
 
     function FetchData(){
 

@@ -23,6 +23,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Component;
 import static java.util.Collections.singletonList;
+import static java.util.Collections.synchronizedSet;
 
 import java.io.*;
 import java.util.*;
@@ -39,30 +40,47 @@ public class PopulateMongo {
 
         com.mongodb.client.MongoClient client = MongoClients.create( "mongodb://localhost:27017");
         MongoDatabase database = client.getDatabase("musicAnalysis");
-        MongoCollection<org.bson.Document> coll = database.getCollection("Musical_Instruments");
+        MongoCollection<org.bson.Document> coll = database.getCollection("meta_Musical_Instruments");
+        System.out.println();
+        MongoIterable<String> strings = database.listCollectionNames();
+        for(String str:strings){
+            System.out.println(str);
 
+        }
         try {
 
             //drop previous import
-            coll.drop();
-
+//            coll.drop();
+            System.out.println("inside try block");
             //Bulk Approach:
             int count = 0;
             int batch = 100;
             List<InsertOneModel<Document>> docs = new ArrayList<>();
 
-            try (BufferedReader br = new BufferedReader(new FileReader("/home/anant/Documents/musicAnalysis/json_files/Musical_Instruments.json"))) {
-                String line;
-                while ((line = br.readLine()) != null) {
-                    docs.add(new InsertOneModel<>(Document.parse(line)));
-                    count++;
-                    if (count == batch) {
-                        coll.bulkWrite(docs, new BulkWriteOptions().ordered(false));
-                        docs.clear();
-                        count = 0;
+            File jsonFile = new File(fileName);
+            System.out.println(jsonFile.isDirectory());
+            if(jsonFile.isDirectory()){
+                File[] jsonFileList = jsonFile.listFiles();
+                for(int i=0;i<jsonFileList.length;i++){
+                    System.out.println("inside jsonIsFile");
+//                    System.out.println(jsonFileList[i].);
+                    try (BufferedReader br = new BufferedReader(new FileReader(jsonFileList[i].toString()))) {
+                        String line;
+                        System.out.println("inside buffer");
+                        while ((line = br.readLine()) != null) {
+                            System.out.println(line);
+                            docs.add(new InsertOneModel<>(Document.parse(line)));
+                            count++;
+                            if (count == batch) {
+                                coll.bulkWrite(docs, new BulkWriteOptions().ordered(false));
+                                docs.clear();
+                                count = 0;
+                            }
+                        }
                     }
                 }
             }
+
 
             if (count > 0) {
                 BulkWriteResult bulkWriteResult = coll.bulkWrite(docs, new BulkWriteOptions().ordered(false));

@@ -2,7 +2,8 @@ import React, {useState,useRef} from 'react'
 import styled from 'styled-components'
 import { useTable, useFilters, useGlobalFilter, useAsyncDebounce,usePagination } from 'react-table'
 import {matchSorter} from 'match-sorter'
-import makeData from '../services/makeData'
+import "../styleSheets/table.css"
+//import makeData from '../services/makeData'
 
 let serverData = []
 
@@ -284,7 +285,7 @@ const Styles = styled.div`
         Pagination can be built however you'd like.
         This is just a very basic UI implementation:
       */}
-                <div className="pagination">
+                <div class = "pagination1" className="pagination">
                     <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
                         {'<<'}
                     </button>

@@ -21,6 +21,9 @@ public class Item {
     String _id;
     String title;
 
+    @Field("date")
+    String date;
+
     @Field("brand")
     String brand;
     List<String> description;
