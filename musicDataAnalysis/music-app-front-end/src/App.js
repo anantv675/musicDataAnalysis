@@ -1,21 +1,27 @@
 import React from "react";
 import ReactDOM from 'react-dom';
 import { useState } from "react";
-import FetchData from "./components/ItemList";
+import FetchList from "./components/ItemList";
+import FetchDataById from "./components/Item";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Switch, Route, Link } from "react-router-dom";
 import "./App.css";
-import Button from '@mui/material/Button';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   
-  const display  = () => {
-    ReactDOM.render(<FetchData />, document.getElementById('root'));
+  const displayList  = () => {
+    ReactDOM.render(<FetchList />, document.getElementById('root'));
   };
+
+  const displayItemById  = () => {
+      ReactDOM.render(<FetchDataById />, document.getElementById('root'));
+    };
 
   return (
       <body>
-        <Button variant="contained" id="root" onClick={display}>Fetch data by brand !</Button>
+        <Button class= "bt1" variant="primary" id="root" onClick={displayList}>Fetch data by brand !</Button>
+        <Button class= "bt2" variant="primary" id="root" onClick={displayItemById}>Fetch data by Item ID !</Button>
       </body>
   );
 }

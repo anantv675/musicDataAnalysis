@@ -1,44 +1,12 @@
 import React, {useState,useRef} from 'react'
-import styled from 'styled-components'
 import { useTable, useFilters, useGlobalFilter, useAsyncDebounce,usePagination } from 'react-table'
 import {matchSorter} from 'match-sorter'
 import "../styleSheets/table.css"
+import Styles from "./Styles"
 //import makeData from '../services/makeData'
 
 let serverData = []
 
-const Styles = styled.div`
-  padding: 1rem;
-
-  table {
-    border-spacing: 0;
-    border: 1px solid black;
-
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-        }
-      }
-    }
-
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem;
-      border-bottom: 1px solid black;
-      border-right: 1px solid black;
-
-      :last-child {
-        border-right: 0;
-      }
-    }
-  }
-
-  .pagination {
-    padding: 0.5rem;
-  }
-`;
 
 // Define a default UI for filtering
     function GlobalFilter({
@@ -285,7 +253,7 @@ const Styles = styled.div`
         Pagination can be built however you'd like.
         This is just a very basic UI implementation:
       */}
-                <div class = "pagination1" className="pagination">
+                <div className="pagination">
                     <button onClick={() => gotoPage(0)} disabled={!canPreviousPage}>
                         {'<<'}
                     </button>

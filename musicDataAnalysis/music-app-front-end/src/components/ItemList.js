@@ -5,7 +5,7 @@ import ItemService from '../services/ItemService'
 import ItemTable from "./PopulateTable";
 import "../styleSheets/tablePage.css";
 
-    function FetchData(){
+    function FetchList(){
 
         // Render the UI for your table
 
@@ -39,4 +39,4 @@ import "../styleSheets/tablePage.css";
     };
 
 
-    export default FetchData
+    export default FetchList
